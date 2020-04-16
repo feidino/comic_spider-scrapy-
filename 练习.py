@@ -1,4 +1,4 @@
-import os
+# import os
 #import random
 #os.mkdir(r'e:\\海飞')
 #print(os.listdir(r'e:\\'))
@@ -22,10 +22,36 @@ with open('assets.csv', 'a', newline='') as csvfile:
     # 用writerow()函数将表头写进csv文件
     writer.writerow(header)
  """
-import pprint
+""" import pprint
 message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
 count = {}
 for character in message:
     count.setdefault(character, 0)
     count[character] = count[character] + 1
-pprint.pprint(count)
+pprint.pprint(count) """
+
+""" spam = 'SpamSpamBaconSpamEggsSpamSpam'
+spam.strip('ampS')
+print(spam)
+print(spam.strip('ampS')) """
+
+""" import pyperclip
+pyperclip.copy('SpamSpamBaconSpamEggsSpamSpam')
+print(pyperclip.paste()) """
+
+import  re
+# 我们一般采用编译的方式使用python的正则模块，如果在大量的数据量中，编译的方式使用正则性能会提高很多，具体读者们可以可以实际测试
+re_str = "hello this is python 2.7.13 and python 3.4.5"
+# re_obj = re.compile(pattern = "python [0-9]\.[0-9]\.[0-9]",flags=re.IGNORECASE)
+# res = re_obj.findall(re_str)
+# print(res)
+
+pattern = re.compile("python [0-9]\.[0-9]\.[0-9]{1,}")
+res = pattern.findall(string=re_str)
+print(res)
+
+
+batRegex = re.compile('Bat(wo)*man')
+mo1 = batRegex.search('The Adventures of Batwowowowoman')
+print(mo1)
+print(mo1.group())
