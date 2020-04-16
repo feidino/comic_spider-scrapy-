@@ -55,3 +55,6 @@ batRegex = re.compile('Bat(wo)*man')
 mo1 = batRegex.search('The Adventures of Batwowowowoman')
 print(mo1)
 print(mo1.group())
+
+str = mo1.group().strip()
+print(str)
