@@ -46,15 +46,24 @@ re_str = "hello this is python 2.7.13 and python 3.4.5"
 # res = re_obj.findall(re_str)
 # print(res)
 
-pattern = re.compile("python [0-9]\.[0-9]\.[0-9]{1,}")
-res = pattern.findall(string=re_str)
-print(res)
+# pattern = re.compile("python [0-9]\.[0-9]\.[0-9]{1,}")
+# res = pattern.findall(string=re_str)
+# print(res)
 
 
-batRegex = re.compile('Bat(wo)*man')
-mo1 = batRegex.search('The Adventures of Batwowowowoman')
-print(mo1)
-print(mo1.group())
+# batRegex = re.compile('Bat(wo)*man')
+# mo1 = batRegex.search('The Adventures of Batwowowowoman')
+# print(mo1)
+# print(mo1.group())
 
-str = mo1.group().strip()
-print(str)
+# str = mo1.group().strip()
+# print(str)
+
+
+import sys
+
+print(sys.argv[0])
+print(sys.argv[1])
+
+
+
