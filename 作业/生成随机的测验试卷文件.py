@@ -31,10 +31,11 @@ for num in range(35):
         qn += 1
         citys = list(capitals.values())
         del citys[citys.index(capitals[state])]
-        random.shuffle(citys)
-        cap_city = [capitals[state],citys[0],citys[1],citys[2]]
+        city_3 = random.sample(citys,3)
+        cap_city = [capitals[state]]+city_3
         random.shuffle(cap_city)
         answerfile.write('%d、%s 的首府是：\n\nA、%s  B、%s  C、%s  D、%s\n\n'%(qn,state,cap_city[0],cap_city[1],cap_city[2],cap_city[3]))
+    answerfile.close()
 
 
 

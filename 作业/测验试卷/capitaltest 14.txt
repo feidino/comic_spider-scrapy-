@@ -6,203 +6,203 @@ Period:
 
                     State Capitals Quiz (Form 14)
 
-1、Oklahoma 的首府是：
+1、Kansas 的首府是：
 
-A、Dover  B、Nashville  C、Oklahoma City  D、Baton Rouge
+A、Topeka  B、Lincoln  C、Springfield  D、Little Rock
 
-2、Tennessee 的首府是：
+2、Rhode Island 的首府是：
 
-A、Austin  B、Nashville  C、Boston  D、Phoenix
+A、Providence  B、Des Moines  C、Honolulu  D、Madison
 
-3、NewMexico 的首府是：
+3、Florida 的首府是：
 
-A、Trenton  B、Denver  C、Santa Fe  D、Indianapolis
+A、Cheyenne  B、Tallahassee  C、Richmond  D、Augusta
 
-4、Vermont 的首府是：
+4、Mississippi 的首府是：
 
-A、Montpelier  B、Hartford  C、Honolulu  D、Lansing
+A、Boston  B、Jackson  C、Jefferson City  D、Dover
 
-5、Mississippi 的首府是：
+5、Michigan 的首府是：
 
-A、Columbia  B、Sacramento  C、Jackson  D、Pierre
+A、Jackson  B、Concord  C、Lansing  D、Helena
 
-6、North Dakota 的首府是：
+6、Nevada 的首府是：
 
-A、Trenton  B、Nashville  C、Bismarck  D、Madison
+A、Concord  B、Annapolis  C、Salt Lake City  D、Carson City
 
-7、Illinois 的首府是：
+7、Wisconsin 的首府是：
 
-A、Harrisburg  B、Frankfort  C、Springfield  D、Montgomery
+A、Oklahoma City  B、Madison  C、Tallahassee  D、Raleigh
 
-8、Wyoming 的首府是：
+8、Oklahoma 的首府是：
 
-A、Cheyenne  B、Juneau  C、Annapolis  D、Olympia
+A、Augusta  B、Salem  C、Cheyenne  D、Oklahoma City
 
-9、Alabama 的首府是：
+9、Georgia 的首府是：
 
-A、Providence  B、Lincoln  C、Honolulu  D、Montgomery
+A、Topeka  B、Lincoln  C、Atlanta  D、Austin
 
-10、Pennsylvania 的首府是：
+10、Alaska 的首府是：
 
-A、Raleigh  B、Madison  C、Harrisburg  D、Pierre
+A、Juneau  B、Albany  C、Santa Fe  D、Augusta
 
-11、Massachusetts 的首府是：
+11、Maryland 的首府是：
 
-A、Lansing  B、Salem  C、Austin  D、Boston
+A、Boise  B、Annapolis  C、Austin  D、Phoenix
 
-12、Colorado 的首府是：
+12、Illinois 的首府是：
 
-A、Baton Rouge  B、Denver  C、Harrisburg  D、Nashville
+A、Dover  B、Springfield  C、Boise  D、Des Moines
 
-13、Virginia 的首府是：
+13、Nebraska 的首府是：
 
-A、Columbia  B、Albany  C、Richmond  D、Montgomery
+A、Frankfort  B、Carson City  C、Lincoln  D、Santa Fe
 
-14、Nebraska 的首府是：
+14、New York 的首府是：
 
-A、Columbia  B、Nashville  C、Lincoln  D、Bismarck
+A、Albany  B、Sacramento  C、Richmond  D、Columbus
 
-15、Missouri 的首府是：
+15、South Carolina 的首府是：
 
-A、Jefferson City  B、Olympia  C、Springfield  D、Tallahassee
+A、Baton Rouge  B、Trenton  C、Columbia  D、Denver
 
-16、Georgia 的首府是：
+16、California 的首府是：
 
-A、Salem  B、Atlanta  C、Columbia  D、Salt Lake City
+A、Sacramento  B、Salem  C、Frankfort  D、Richmond
 
-17、Iowa 的首府是：
+17、NewMexico 的首府是：
 
-A、Dover  B、Little Rock  C、Richmond  D、Des Moines
+A、Tallahassee  B、Springfield  C、Augusta  D、Santa Fe
 
-18、Alaska 的首府是：
+18、Louisiana 的首府是：
 
-A、Juneau  B、Saint Paul  C、Dover  D、Bismarck
+A、Honolulu  B、Olympia  C、Baton Rouge  D、Salem
 
-19、Wisconsin 的首府是：
+19、North Dakota 的首府是：
 
-A、Charleston  B、Jefferson City  C、Tallahassee  D、Madison
+A、Springfield  B、Helena  C、Jackson  D、Bismarck
 
-20、New Jersey 的首府是：
+20、Arkansas 的首府是：
 
-A、Des Moines  B、Springfield  C、Topeka  D、Trenton
+A、Madison  B、Jefferson City  C、Little Rock  D、Albany
 
-21、Louisiana 的首府是：
+21、North Carolina 的首府是：
 
-A、Saint Paul  B、Baton Rouge  C、Tallahassee  D、Augusta
+A、Jackson  B、Sacramento  C、Raleigh  D、Frankfort
 
-22、New Hampshire 的首府是：
+22、Texas 的首府是：
 
-A、Concord  B、Trenton  C、Tallahassee  D、Nashville
+A、Olympia  B、Austin  C、Saint Paul  D、Jackson
 
-23、South Dakota 的首府是：
+23、Maine 的首府是：
 
-A、Austin  B、Carson City  C、Columbia  D、Pierre
+A、Carson City  B、Augusta  C、Austin  D、Montgomery
 
-24、Michigan 的首府是：
+24、Delaware 的首府是：
 
-A、Bismarck  B、Raleigh  C、Lansing  D、Columbus
+A、Dover  B、Indianapolis  C、Des Moines  D、Augusta
 
-25、Ohio 的首府是：
+25、Oregon 的首府是：
 
-A、Frankfort  B、Columbus  C、Denver  D、Des Moines
+A、Dover  B、Salem  C、Columbia  D、Atlanta
 
-26、Delaware 的首府是：
+26、Kentucky 的首府是：
 
-A、Dover  B、Boston  C、Montpelier  D、Denver
+A、Frankfort  B、Atlanta  C、Little Rock  D、Salt Lake City
 
-27、Oregon 的首府是：
+27、Iowa 的首府是：
 
-A、Trenton  B、Salem  C、Jefferson City  D、Olympia
+A、Lincoln  B、Jefferson City  C、Richmond  D、Des Moines
 
-28、Nevada 的首府是：
+28、Montana 的首府是：
 
-A、Phoenix  B、Carson City  C、Jackson  D、Annapolis
+A、Helena  B、Madison  C、Harrisburg  D、Phoenix
 
-29、New York 的首府是：
+29、Washington 的首府是：
 
-A、Sacramento  B、Nashville  C、Albany  D、Lansing
+A、Olympia  B、Boston  C、Harrisburg  D、Salem
 
-30、WestVirginia 的首府是：
+30、Colorado 的首府是：
 
-A、Raleigh  B、Charleston  C、Harrisburg  D、Topeka
+A、Nashville  B、Denver  C、Montgomery  D、Madison
 
-31、Utah 的首府是：
+31、Vermont 的首府是：
 
-A、Phoenix  B、Annapolis  C、Salt Lake City  D、Richmond
+A、Montpelier  B、Augusta  C、Santa Fe  D、Oklahoma City
 
-32、Idaho 的首府是：
+32、New Hampshire 的首府是：
 
-A、Boise  B、Baton Rouge  C、Saint Paul  D、Cheyenne
+A、Sacramento  B、Carson City  C、Boise  D、Concord
 
-33、Connecticut 的首府是：
+33、Virginia 的首府是：
 
-A、Sacramento  B、Jackson  C、Concord  D、Hartford
+A、Richmond  B、Montgomery  C、Des Moines  D、Cheyenne
 
 34、Arizona 的首府是：
 
-A、Jackson  B、Phoenix  C、Lansing  D、Little Rock
+A、Baton Rouge  B、Phoenix  C、Indianapolis  D、Jefferson City
 
-35、Texas 的首府是：
+35、Ohio 的首府是：
 
-A、Charleston  B、Dover  C、Lansing  D、Austin
+A、Columbus  B、Raleigh  C、Dover  D、Cheyenne
 
-36、Rhode Island 的首府是：
+36、New Jersey 的首府是：
 
-A、Austin  B、Raleigh  C、Dover  D、Providence
+A、Jefferson City  B、Trenton  C、Austin  D、Topeka
 
-37、South Carolina 的首府是：
+37、Connecticut 的首府是：
 
-A、Columbia  B、Cheyenne  C、Hartford  D、Oklahoma City
+A、Hartford  B、Jackson  C、Trenton  D、Carson City
 
-38、Kentucky 的首府是：
+38、Missouri 的首府是：
 
-A、Boise  B、Frankfort  C、Nashville  D、Helena
+A、Lincoln  B、Des Moines  C、Salem  D、Jefferson City
 
-39、Arkansas 的首府是：
+39、Idaho 的首府是：
 
-A、Austin  B、Raleigh  C、Tallahassee  D、Little Rock
+A、Boise  B、Phoenix  C、Des Moines  D、Montpelier
 
-40、California 的首府是：
+40、Utah 的首府是：
 
-A、Little Rock  B、Providence  C、Phoenix  D、Sacramento
+A、Salt Lake City  B、Concord  C、Sacramento  D、Denver
 
-41、Kansas 的首府是：
+41、Minnesota 的首府是：
 
-A、Dover  B、Topeka  C、Baton Rouge  D、Springfield
+A、Boise  B、Saint Paul  C、Juneau  D、Dover
 
-42、Montana 的首府是：
+42、WestVirginia 的首府是：
 
-A、Helena  B、Harrisburg  C、Boise  D、Oklahoma City
+A、Bismarck  B、Des Moines  C、Charleston  D、Phoenix
 
-43、Hawaii 的首府是：
+43、Indiana 的首府是：
 
-A、Honolulu  B、Concord  C、Albany  D、Columbia
+A、Boston  B、Montpelier  C、Charleston  D、Indianapolis
 
-44、Florida 的首府是：
+44、Alabama 的首府是：
 
-A、Augusta  B、Des Moines  C、Tallahassee  D、Atlanta
+A、Sacramento  B、Denver  C、Jefferson City  D、Montgomery
 
-45、Minnesota 的首府是：
+45、Massachusetts 的首府是：
 
-A、Raleigh  B、Salt Lake City  C、Phoenix  D、Saint Paul
+A、Charleston  B、Boston  C、Frankfort  D、Lansing
 
-46、Maryland 的首府是：
+46、Hawaii 的首府是：
 
-A、Jackson  B、Phoenix  C、Carson City  D、Annapolis
+A、Hartford  B、Helena  C、Honolulu  D、Juneau
 
-47、Indiana 的首府是：
+47、Pennsylvania 的首府是：
 
-A、Indianapolis  B、Springfield  C、Denver  D、Jefferson City
+A、Harrisburg  B、Boston  C、Richmond  D、Carson City
 
-48、Washington 的首府是：
+48、Tennessee 的首府是：
 
-A、Olympia  B、Salt Lake City  C、Madison  D、Boise
+A、Juneau  B、Montpelier  C、Nashville  D、Saint Paul
 
-49、North Carolina 的首府是：
+49、South Dakota 的首府是：
 
-A、Raleigh  B、Lansing  C、Providence  D、Richmond
+A、Pierre  B、Charleston  C、Frankfort  D、Juneau
 
-50、Maine 的首府是：
+50、Wyoming 的首府是：
 
-A、Montgomery  B、Honolulu  C、Augusta  D、Springfield
+A、Santa Fe  B、Salem  C、Phoenix  D、Cheyenne
 

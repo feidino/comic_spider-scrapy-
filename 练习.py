@@ -39,9 +39,9 @@ print(spam.strip('ampS')) """
 pyperclip.copy('SpamSpamBaconSpamEggsSpamSpam')
 print(pyperclip.paste()) """
 
-import  re
+# import  re
 # 我们一般采用编译的方式使用python的正则模块，如果在大量的数据量中，编译的方式使用正则性能会提高很多，具体读者们可以可以实际测试
-re_str = "hello this is python 2.7.13 and python 3.4.5"
+# re_str = "hello this is python 2.7.13 and python 3.4.5"
 # re_obj = re.compile(pattern = "python [0-9]\.[0-9]\.[0-9]",flags=re.IGNORECASE)
 # res = re_obj.findall(re_str)
 # print(res)
@@ -60,10 +60,106 @@ re_str = "hello this is python 2.7.13 and python 3.4.5"
 # print(str)
 
 
-import sys
+# # 引入requests库
+# import requests
 
-print(sys.argv[0])
-print(sys.argv[1])
+# # 发出请求，并把返回的结果放在变量res中
+# res = requests.get('https://res.pandateacher.com/2018-12-18-10-43-07.png')
+# # 把Reponse对象的内容以二进制数据的形式返回
+# pic = res.content
+# # 新建了一个文件ppt.jpg，这里的文件没加路径，它会被保存在程序运行的当前目录下。
+# # 图片内容需要以二进制wb读写。你在学习open()函数时接触过它。
+# photo = open('ppt.jpg','wb')
+# # 获取pic的二进制内容
+# photo.write(pic) 
+# # 关闭文件
+# photo.close()
+
+# import requests
+# txt = requests.get('https://localprod.pandateacher.com/python-manuscript/crawler-html/sanguo.md')
+# res = txt.text
+# sanguo = open ('sanguo.txt','w',encoding='utf-8')
+# sanguo.write(res)
+# sanguo.close()
+# with open('sanguo.txt','r') as sanguo:
+#     lines = sanguo.readlines()
+# print(lines)
+
+# import requests
+# pic = requests.get('https://res.pandateacher.com/2019-01-12-15-29-33.png')
+# data = pic.content
+# picture = open ('Spider.jpg','wb')
+# picture.write(data)
+# picture.close()
 
 
+# import requests
+# mus = requests.get('https://static.pandateacher.com/Over%20The%20Rainbow.mp3')
+# data = mus.content
+# music = open ('Rainbow.mp3','wb')
+# music.write(data)
+# music.close()
 
+# import requests
+# from bs4 import BeautifulSoup
+# res = requests.get('https://localprod.pandateacher.com/python-manuscript/crawler-html/spider-men5.0.html')
+# html = res.text
+# soup = BeautifulSoup( html,'html.parser')
+# items = soup.find_all(class_='books')
+# for item in items:
+#     kind = item.find('h2')
+#     # print(kind)
+#     title = item.find(class_='title')
+#     print(title)
+#     brief = item.find(class_='info')
+# print(kind.text,'\n',title.text,'\n',title['class'],'\n',brief.text) 
+
+import requests
+from bs4 import BeautifulSoup
+
+# header = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0'}
+# food_page = requests.get('https://movie.douban.com/top250?start=225&filter=',headers=header)
+# soup = BeautifulSoup(food_page.text,'html.parser')
+# # food_info = soup.find_all('div',class_="info pure-u")
+# # num = 0
+# print(soup)
+# print(food_info)
+# for massage in page_info:
+#     # print(classi)
+#     num += 1
+#     art_title = massage.find('h2',class_="entry-title")
+#     # print(art_title)
+#     publ_time = massage.find('time',class_="entry-date published")
+#     # print(publ_time)
+#     art_link = massage.find('a')
+#     # print(art_link['href'])
+
+#     print('%d、title:%s, publish time：%s, artilcle link：%s'%(num,art_title.text,publ_time.text,art_link['href'])) 
+
+
+import requests
+from bs4 import BeautifulSoup
+
+header = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0'}
+num = 0
+# for i in range(0,250,25):
+    # print('https://movie.douban.com/top250?start=%d&filter='%(i))
+page = requests.get('https://movie.douban.com/top250?start=225&filter=',headers = header)
+soup = BeautifulSoup(page.text,'html.parser')
+movies_info = soup.find_all('ol',class_="grid_view")
+# print(soup)
+print(movies_info)
+# for movie in movies_info:
+#     # print(classi)
+#     num += 1
+#     movie_name = movie.find('span',class_="title")
+#     # print(movie_name)
+#     movie_grade= movie.find('span',class_="rating_num")
+#     # print(movie_grade)
+#     movie_comment = movie.find('span',class_="inq")
+#     # print(movie_comment)
+#     movie_link = movie.find('a',class_="")
+#     try:
+#         print('%d、电影名:%s, 豆瓣评分：%s分, 推荐语：%s, 电影链接：%s'%(num,movie_name.text,movie_grade.text,movie_comment.text,movie_link['href'])) 
+#     except AttributeError:
+#         print('')
