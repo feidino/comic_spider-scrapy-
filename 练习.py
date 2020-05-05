@@ -137,18 +137,18 @@ from bs4 import BeautifulSoup
 #     print('%d、title:%s, publish time：%s, artilcle link：%s'%(num,art_title.text,publ_time.text,art_link['href'])) 
 
 
-import requests
-from bs4 import BeautifulSoup
+# import requests
+# from bs4 import BeautifulSoup
 
-header = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0'}
-num = 0
-# for i in range(0,250,25):
-    # print('https://movie.douban.com/top250?start=%d&filter='%(i))
-page = requests.get('https://movie.douban.com/top250?start=225&filter=',headers = header)
-soup = BeautifulSoup(page.text,'html.parser')
-movies_info = soup.find_all('ol',class_="grid_view")
-# print(soup)
-print(movies_info)
+# header = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0'}
+# num = 0
+# # for i in range(0,250,25):
+#     # print('https://movie.douban.com/top250?start=%d&filter='%(i))
+# page = requests.get('https://movie.douban.com/top250?start=225&filter=',headers = header)
+# soup = BeautifulSoup(page.text,'html.parser')
+# movies_info = soup.find_all('ol',class_="grid_view")
+# # print(soup)
+# print(movies_info)
 # for movie in movies_info:
 #     # print(classi)
 #     num += 1
@@ -163,3 +163,53 @@ print(movies_info)
 #         print('%d、电影名:%s, 豆瓣评分：%s分, 推荐语：%s, 电影链接：%s'%(num,movie_name.text,movie_grade.text,movie_comment.text,movie_link['href'])) 
 #     except AttributeError:
 #         print('')
+
+
+string = 'abcdef'
+string.strip('abc')
+# s = string - 'abc'
+print(string.strip('abc')+'ghi')
+
+
+home_page = requests.get('https://www.ygdy8.com/index.html')
+home_page.encoding = 'gbk'
+soup = BeautifulSoup(home_page.text,'html.parser')
+home_info = soup.find_all('div',id="menu")
+# print(home_page.status_code)
+# print(soup)
+mov_cls = {}
+mov_info = {}
+mov_d_link = {}
+def cal_info(home_info):
+    for home in home_info:
+        calssified = home.find_all('a')
+        for link in calssified:
+            mov_cls[link.text]='https://www.ygdy8.com/'+link['href']
+# link_li = mov_cls.values()
+# mov_cal_li = mov_cls.keys() 
+# print(link_li)
+# print(mov_cal_li)
+def china_mov(china,name = None):
+    for i in range(108):
+        china_page = requests.get(mov_cls[china].strip('index.html')+'list_4_%d.html'%i)
+        china_page.encoding = 'gbk'
+        soup = BeautifulSoup(china_page.text,'html.parser')
+        china_mov_info = soup.find_all('div',class_="co_content8")
+        down_link = check_mov(china_mov_info,name)
+        print(down_link)
+
+def check_mov(info,name):
+    for mov in info:
+            mov_name = mov.find('b')
+            mov_info[mov_name[1].text] = 'https://www.ygdy8.com/'+mov_name[1]['href']
+            down_link = download_link(mov_info[name])
+            return down_link
+
+def download_link(mov_link):
+    mov_page = requests.get(mov_link)
+    mov_page.encoding = 'gbk'
+    soup = BeautifulSoup(mov_page.text,'html.parser')
+    download_info = soup.find_all('table',align="center")
+    for links in download_info:
+        D_link = links.find('a')['thunderrestitle']
+    return D_link
