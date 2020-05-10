@@ -368,34 +368,46 @@
 # time.sleep(1)
 # driver.close() # 关闭浏览器
 
-import gevent
-from gevent.queue import Queue
-from gevent import monkey
-monkey.patch_all()
-import time,requests
+# import gevent
+# from gevent.queue import Queue
+# from gevent import monkey
+# monkey.patch_all()
+# import time,requests
 
-start = time.time()
+# start = time.time()
 
-url_list = ['https://www.baidu.com/',
-'https://www.sina.com.cn/',
-'http://www.sohu.com/',
-'https://www.qq.com/',
-'https://www.163.com/',
-'http://www.iqiyi.com/',
-'https://www.tmall.com/',
-'http://www.ifeng.com/']
-work = Queue()
-for url in url_list:
-    work.put_nowait(url)
-def crawler():
-    while not work.empty():
-        url = work.get_nowait()
-        res = requests.get(url)
-        print(url,work.qsize(),res.status_code)
-task_list = []
-for i in range(3):
-    task = gevent.spawn(crawler)
-    task_list.append(task)
-gevent.joinall(task_list)
-end = time.time()
-print(end-start)
+# url_list = ['https://www.baidu.com/',
+# 'https://www.sina.com.cn/',
+# 'http://www.sohu.com/',
+# 'https://www.qq.com/',
+# 'https://www.163.com/',
+# 'http://www.iqiyi.com/',
+# 'https://www.tmall.com/',
+# 'http://www.ifeng.com/']
+# work = Queue()
+# for url in url_list:
+#     work.put_nowait(url)
+# def crawler():
+#     while not work.empty():
+#         url = work.get_nowait()
+#         res = requests.get(url)
+#         print(url,work.qsize(),res.status_code)
+# task_list = []
+# for i in range(3):
+#     task = gevent.spawn(crawler)
+#     task_list.append(task)
+# gevent.joinall(task_list)
+# end = time.time()
+# print(end-start)
+
+
+import requests,random
+from bs4 import BeautifulSoup
+header = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36'}
+page = requests.get('https://www.jobui.com/company/10375749/jobs/',headers = header)
+soup = BeautifulSoup(page.text,'html.parser')
+print(soup)
+
+
+
+
