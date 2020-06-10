@@ -32,12 +32,7 @@
 import requests,random
 import json
 headers = {
-    'Cookie': 'csrftoken=OfTg6Y8lS3zEAUjHsbFsbnclV1iYj60rLAtylzK54Wo; WWWID=WWW385978F411E168F352454F30CD18CEB2; __gads=ID=a5062c72cd03b0b1:T=1588656488:S=ALNI_MZisOVJZ_p6sjoC8RhF-azK8K3lhg; Hm_lvt_22ea01af58ba2be0fec7c11b25e88e6c=1588656488,1588657150,1588659733; Hm_lpvt_22ea01af58ba2be0fec7c11b25e88e6c=1588659733',
-    'Host': 'www.kuaidi100.com',
-    # 请求来源，本案例中其实是不需要加这个参数的，只是为了演示
-    'referer':'https://www.kuaidi100.com/',
-    # 请求来源，携带的信息比“origin”更丰富，本案例中其实是不需要加这个参数的，只是为了演示
-    'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+    'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36',
     # 标记了请求从什么设备，什么浏览器上发出
     }
 # 伪装请求头
@@ -46,10 +41,10 @@ def get_express_type(postid):
     '''根据快递单号来智能判断快递类型'''
     url = 'http://www.kuaidi100.com/autonumber/autoComNum?resultv2=1&text=%s' % (postid,)  # 这里可以用元组这样保证的数据的安全性
     # 把构造后的url通过requests请求来得到相应的数据是一个json数据
-    rs = requests.get(url,headers=headers)
+    rs = requests.get(url)
     # 再用json库中的loads数据来进行分析得到一个可用字典的方式来访问
     kd_type_info = rs.json()
-    # print(kd_type_info)
+    print(rs.status_code)
     kd_type = kd_type_info['auto'][0]['comCode']
     return kd_type, postid
 
@@ -61,9 +56,9 @@ def execute_data_query(type, postid):
     temp  = random.random()
     url = 'https://www.kuaidi100.com/query?type=%s&postid=%s&temp=%s&phone=' % (type, postid,str(temp)) # 这里可以用元组这样保证的数据的安全性
     # 把构造后的url通过requests请求来得到相应的数据是一个json数据
-    rs = requests.get(url)
+    rs = requests.get(url,headers=headers)
     # 再用json库中的loads数据来进行分析得到一个可用字典的方式来访问
-    kd_info =  rs.json()
+    kd_info =  json.loads(rs.text)
     msg = kd_info['message']
     # 判断是否成功获取到了json的数据，如果有数据则进行下一步的解析
     if msg == 'ok':

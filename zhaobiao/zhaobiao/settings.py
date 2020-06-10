@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for jobui project
+# Scrapy settings for zhaobiao project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,21 +9,17 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'jobui'
+BOT_NAME = 'zhaobiao'
 
-SPIDER_MODULES = ['jobui.spiders']
-NEWSPIDER_MODULE = 'jobui.spiders'
+SPIDER_MODULES = ['zhaobiao.spiders']
+NEWSPIDER_MODULE = 'zhaobiao.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36'
+#USER_AGENT = 'zhaobiao (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = False
-
-FEED_URI='./data/%(name)s.csv'
-FEED_FORMAT='csv'
-FEED_EXPORT_ENCODING='gbk'
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -31,7 +27,7 @@ FEED_EXPORT_ENCODING='gbk'
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 0.5
+#DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -51,13 +47,13 @@ DOWNLOAD_DELAY = 0.5
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'jobui.middlewares.JobuiSpiderMiddleware': 543,
+#    'zhaobiao.middlewares.ZhaobiaoSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'jobui.middlewares.JobuiDownloaderMiddleware': 543,
+#    'zhaobiao.middlewares.ZhaobiaoDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -68,9 +64,9 @@ DOWNLOAD_DELAY = 0.5
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'jobui.pipelines.JobuiPipeline': 300,
-# }
+#ITEM_PIPELINES = {
+#    'zhaobiao.pipelines.ZhaobiaoPipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

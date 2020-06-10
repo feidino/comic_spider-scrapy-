@@ -401,12 +401,93 @@
 # print(end-start)
 
 
-import requests,random
+# import requests,random
+# from bs4 import BeautifulSoup
+# header = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36'}
+# page = requests.get('https://www.jobui.com/company/10375749/jobs/',headers = header)
+# soup = BeautifulSoup(page.text,'html.parser')
+# print(soup)
+
+import gevent
+from gevent.queue import Queue
+from gevent import monkey
+monkey.patch_all()
+import requests,time,csv
 from bs4 import BeautifulSoup
-header = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36'}
-page = requests.get('https://www.jobui.com/company/10375749/jobs/',headers = header)
-soup = BeautifulSoup(page.text,'html.parser')
-print(soup)
+from urllib.parse import urlparse
+
+header = {
+    'Connection': 'close',
+    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36'
+    }
+res = requests.get('http://www.foshannews.net/jtzb2016/',headers = header)
+res.encoding = 'utf-8'
+bs = BeautifulSoup(res.text,'html.parser')
+datas_0 = bs.find('ul', class_="mbd dot f14")
+datas = datas_0.find_all('li')
+# data = bs.find_all('p',class_ ='MsoNormal' )
+link_list =[]
+for text in datas:
+    link = text.find('a')['href']
+    if link[0] == '.':
+        links = 'http://www.foshannews.net/jtzb2016'+link[1:]
+        link_list.append(links)
+        # print(links)
+    else:
+        links = link
+        link_list.append(links)
+        # print(links)
+sucess_list = []
+fail_list = []
+work = Queue()
+requests.DEFAULT_RETRIES = 5
+# s = requests.session()
+# s.keep_alive = False
+for url in link_list:
+    work.put_nowait(url)
+def crawler():
+    while not work.empty():
+        url = work.get_nowait()
+        res = requests.get(url,headers = header)
+        try:
+            if res.status_code == 200:
+                sucess_list.append(url)
+            else:
+                fail_list.append(url)
+        except:
+            print("Connection refused by the server..")
+            fail_list.append(url)
+task_list = []
+for i in range(8):
+    task = gevent.spawn(crawler)
+    task_list.append(task)
+gevent.joinall(task_list)
+urlfile = open('url.csv','w',newline='',encoding = 'utf-8')
+url_0 = csv.writer(urlfile)
+sucess_list.sort()
+print(len(sucess_list))
+for u in sucess_list:
+    print(u)
+    url_0.writerow([u])
+
+
+# urlfile = open('url.csv','r',encoding='utf-8')
+# urls = csv.reader(urlfile)
+# url = urls
+# url_list = []
+# for url in urls:
+#     # print(type(url))
+#     # print(url)
+#     for u in url:
+#         res = urlparse(u)
+#         host = res.netloc
+#     if host in url_list:
+#         pass
+#     else:
+#         url_list.append(host)
+# print(url_list)
+# print(sucess_list)
+
 
 
 
