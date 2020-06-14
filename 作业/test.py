@@ -32,12 +32,16 @@ soup = BeautifulSoup(res_0.text,'html.parser')
 datas = soup.find('div', id = "content")
 book_name = datas.find('h1').text
 con_data = datas.find_all('li',class_ = 'comment-item')
-# print (con_data)
-for data in con_data:
-    user = data.find('span', class_='comment-info').find('a').text
-    # user_id = user.find('a')['title']
-    comment = data.find('p', class_='comment-content').text
-    # print(book_name)
-    print(user)
-    # print(comment)
-# print(url_li)
+# # print (con_data)
+# for data in con_data:
+#     user = data.find('span', class_='comment-info').find('a').text
+#     # user_id = user.find('a')['title']
+#     comment = data.find('p', class_='comment-content').text
+#     # print(book_name)
+#     print(user)
+#     # print(comment)
+# # print(url_li)
+
+# response.urljoin(response.css('#chapter-list-1>li:first-child>a').xpath('./@href').extract_first()) 
+# response.urljoin(response.css('#chapter-list-1>li:last-child>a').xpath('./@href').extract_first())
+
