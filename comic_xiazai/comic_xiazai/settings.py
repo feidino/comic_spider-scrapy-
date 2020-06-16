@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for comic_download project
+# Scrapy settings for comic_xiazai project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,10 +9,10 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'comic_download'
+BOT_NAME = 'comic_xiazai'
 
-SPIDER_MODULES = ['comic_download.spiders']
-NEWSPIDER_MODULE = 'comic_download.spiders'
+SPIDER_MODULES = ['comic_xiazai.spiders']
+NEWSPIDER_MODULE = 'comic_xiazai.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -55,17 +55,12 @@ SPIDER_MIDDLEWARES = {
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#开启Splash的两个下载中间件并调整HttpCompressionMiddleware的次序
 DOWNLOADER_MIDDLEWARES = {
         'scrapy_splash.SplashCookiesMiddleware': 723,
         'scrapy_splash.SplashMiddleware':725,
-        'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware':810, 
+        'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware':810,
 }
 
-#设置去重过滤器
-DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
-# 缓存后台存储介质
-HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
 #EXTENSIONS = {
@@ -75,8 +70,12 @@ HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'comic_download.pipelines.ComicImagesPipeline': 1,
+   'comic_xiazai.pipelines.ComicImagesPipeline': 1,
 }
+#设置去重过滤器
+DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
+# 缓存后台存储介质
+HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
 IMAGES_STORE='G:\comic'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

@@ -8,6 +8,11 @@ from .settings import IMAGES_STORE
 from scrapy.pipelines.images import ImagesPipeline
 from scrapy import Request
 import scrapy,os
+
+# class ComicXiazaiPipeline:
+#     def process_item(self, item, spider):
+#         return item
+
 class ComicImagesPipeline(ImagesPipeline):
     def get_media_requests(self, item,info):
         for image_url in item['image_urls']:
@@ -25,3 +30,4 @@ class ComicImagesPipeline(ImagesPipeline):
         #     os.makedirs(comic_path)
         filename = '%s/%s.jpg'%(comic_path,image_guid)
         return filename
+
